@@ -1,0 +1,50 @@
+name:  My First Devops Pipeline
+
+on:
+  push:
+    branches:  [ main ]
+
+jobs:
+  check-server:
+    runs-on:  ubuntu-latest
+
+    steps:
+      - name:  Get the code
+name: My First DevOps Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  check-server:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v3
+
+      - name: Show system info
+        run: |
+          echo "Pipeline is running!"
+          echo "Date: $(date)"
+          whoami
+          uname -a
+
+      - name: Check files
+        run: |
+          echo "Files in repository:"
+          ls -la
+
+      - name: Run a test
+        run: |
+          echo "Running tests..."
+          if [ -f "README.MD" ]; then
+            echo "README exists! Test passed!"
+          else
+            echo "README missing! Test failed!"
+            exit 1
+          fi
+
+      - name: Success message
+        run: echo "Pipeline completed successfully!"        uses:  actions/checkout@v3
