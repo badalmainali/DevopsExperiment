@@ -36,4 +36,3 @@ jobs:
 
       - name: Success message
         run: echo "Pipeline completed successfully!"
-EOF
