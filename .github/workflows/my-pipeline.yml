@@ -1,15 +1,4 @@
-name:  My First Devops Pipeline
-
-on:
-  push:
-    branches:  [ main ]
-
-jobs:
-  check-server:
-    runs-on:  ubuntu-latest
-
-    steps:
-      - name:  Get the code
+cat > .github/workflows/my-pipeline.yml << 'EOF'
 name: My First DevOps Pipeline
 
 on:
@@ -48,3 +37,4 @@ jobs:
 
       - name: Success message
         run: echo "Pipeline completed successfully!"
+EOF
