@@ -1,4 +1,3 @@
-cat > .github/workflows/my-pipeline.yml << 'EOF'
 name: My First DevOps Pipeline
 
 on:
