@@ -1,0 +1,18 @@
+# Secret files - NEVER commit these!
+.env
+*.pem
+*.key
+secrets.txt
+passwords.txt
+
+# Log files
+*.log
+logs/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Large dependency folders
+node_modules/
+vendor/
